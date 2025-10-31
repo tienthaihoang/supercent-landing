@@ -1,7 +1,19 @@
-import type { NextConfig } from "next";
+import createNextIntlPlugin from "next-intl/plugin";
 
-const nextConfig: NextConfig = {
-  /* config options here */
+const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/en",
+        permanent: false, // Dùng false để tránh cache redirectx
+      },
+    ];
+  },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

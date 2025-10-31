@@ -1,0 +1,176 @@
+"use client";
+
+import { site } from "@/config/site";
+import { Select } from "antd";
+import { useLocale, useTranslations } from "next-intl";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
+import { useState, useTransition } from "react";
+
+export default function Navbar() {
+  const [open, setOpen] = useState(false);
+  const [isPending, startTransition] = useTransition();
+
+  const router = useRouter();
+  const locale = useLocale();
+  const pathname = usePathname();
+  const t = useTranslations("nav");
+
+  const onLanguageChange = (newLocale: string) => {
+    startTransition(() => {
+      const segments = pathname.split("/");
+      segments[1] = newLocale;
+      const newPath = segments.join("/") || "/";
+      router.replace(newPath);
+    });
+  };
+
+  return (
+    <>
+      <nav className="fixed top-0 left-0 w-full z-[99]">
+        <div className="container mx-auto px-4 py-3 md:py-4">
+          <div className="backdrop-blur-md bg-slate-900/80 shadow-lg border border-white/10 rounded-2xl px-4 md:px-6">
+            <div className="grid grid-cols-12 items-center py-3">
+              <div className="col-span-12 lg:col-span-8 lg:col-start-3 flex items-center justify-between">
+                <Link
+                  href="/"
+                  className="flex items-center transition-transform hover:scale-105"
+                >
+                  <div className="text-2xl font-black bg-gradient-to-r from-purple-400 via-indigo-400 to-blue-400 bg-clip-text text-transparent">
+                    Daily Drop
+                  </div>
+                </Link>
+
+                <div className="lg:hidden flex items-center gap-3">
+                  <Select
+                    value={locale}
+                    onChange={onLanguageChange}
+                    options={[
+                      { value: "en", label: "EN" },
+                      { value: "vi", label: "VI" },
+                    ]}
+                    className="w-16"
+                    size="middle"
+                    disabled={isPending}
+                  />
+
+                  <button
+                    onClick={() => setOpen(!open)}
+                    aria-label="Toggle menu"
+                    className="text-white focus:outline-none hover:scale-110 transition-transform p-1"
+                  >
+                    {open ? (
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-6 w-6"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    ) : (
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1.5}
+                        stroke="currentColor"
+                        className="w-6 h-6"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                        />
+                      </svg>
+                    )}
+                  </button>
+                </div>
+
+                <div className="hidden lg:flex lg:items-center lg:space-x-6">
+                  {site.routes.map((item, idx) => (
+                    <Link
+                      key={idx}
+                      href={item.path}
+                      className="font-semibold text-slate-300 hover:text-white transition-all hover:scale-110"
+                    >
+                      {t(item.title)}
+                    </Link>
+                  ))}
+
+                  <Select
+                    value={locale}
+                    onChange={onLanguageChange}
+                    options={[
+                      { value: "en", label: "🇺🇸 EN" },
+                      { value: "vi", label: "🇻🇳 VI" },
+                    ]}
+                    className="w-28"
+                    size="large"
+                    disabled={isPending}
+                  />
+
+                  {/* <button
+                    onClick={() => setContactModalOpen(true)}
+                    className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold px-6 py-2.5 rounded-xl shadow-lg shadow-purple-900/50 hover:shadow-xl hover:shadow-purple-800/50 transition-all duration-300 hover:scale-105"
+                  >
+                    {t("contact")}
+                  </button> */}
+                </div>
+              </div>
+
+              <div
+                className={`col-span-12 lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+                  open ? "max-h-96 opacity-100 mt-4" : "max-h-0 opacity-0"
+                }`}
+              >
+                <div className="col-span-12 lg:hidden flex flex-col space-y-4 mt-4 pb-4 border-t border-white/10 pt-4">
+                  {site.routes.map((item, idx) => (
+                    <Link
+                      key={idx}
+                      href={item.path}
+                      onClick={() => setOpen(false)}
+                      className={`font-semibold text-slate-300 hover:text-white transition-all hover:scale-105 transform ${
+                        open
+                          ? "translate-y-0 opacity-100"
+                          : "-translate-y-4 opacity-0"
+                      }`}
+                      style={{
+                        transitionDelay: open ? `${idx * 50}ms` : "0ms",
+                      }}
+                    >
+                      {t(item.title)}
+                    </Link>
+                  ))}
+
+                  {/* <button
+                    onClick={() => {
+                      setContactModalOpen(true);
+                      setOpen(false);
+                    }}
+                    className={`bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold px-6 py-3 rounded-xl shadow-lg shadow-purple-900/50 transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2 transform ${
+                      open
+                        ? "translate-y-0 opacity-100"
+                        : "-translate-y-4 opacity-0"
+                    }`}
+                    style={{
+                      transitionDelay: open
+                        ? `${site.routes.length * 50}ms`
+                        : "0ms",
+                    }}
+                  >
+                    {t("contact")}
+                  </button> */}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </>
+  );
+}
