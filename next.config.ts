@@ -9,7 +9,7 @@ const nextConfig = {
     return [
       {
         source: "/",
-        destination: "/en",
+        destination: "/vi",
         permanent: false, // Dùng false để tránh cache redirectx
       },
     ];

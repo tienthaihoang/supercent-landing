@@ -1,8 +1,357 @@
 {
   "nav": {
-    "subscription": "Subscription",
-    "pricing": "Pricing",
+    "participants": "Participants",
+    "benefits": "Benefits",
+    "activities": "Main Activities",
     "faq": "FAQ",
-    "contact": "Contact us"
+    "register": "Register Now"
+  },
+  "hero": {
+    "date": "Tue 25th, Nov 25.11.2025",
+    "time": "9:00 - 17:00",
+    "location": "Floor 23, The Mett, HCMC",
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds"
+  },
+  "about": {
+    "title": "ABOUT",
+    "content1": "**K-Tech Innovation Hub 2025** is a key event within the framework of **K-Tech College 2025**, organized by **LIKELION Vietnam** in collaboration with **KOSME - Korea SMEs and Startups Agency** and **JobKorea - Korean Recruitment Platform**, with **100%** funding from the **Korean Government**.",
+    "content2": "The event creates a **space where creativity and technology converge**, where young people can **learn, connect, discover career opportunities and collaborate with Vietnamese - Korean** enterprises in the fields of **AI, creativity, gaming and digital technology**."
+  },
+  "partners": {
+    "title": "PARTNERS & SPONSORS"
+  },
+  "audience": {
+    "title": "TARGET AUDIENCE",
+    "student": {
+      "description": "For students and professionals in IT, Communications, Marketing and Creative Design"
+    },
+    "business": {
+      "description": "Candidates who want to work at Korean companies, especially those with a global business mindset"
+    },
+    "youth": {
+      "description": "AI enthusiasts who are passionate about applying technology to create new value"
+    },
+    "creator": {
+      "description": "Creative souls who love challenges and want to break through to reach greater heights"
+    }
+  },
+  "benefits": {
+    "title": "BENEFITS",
+    "benefit1": "Direct interviews with Korean companies",
+    "benefit2": "Over 30 attractive IT positions, more than 100 recruitment slots for potential candidates",
+    "benefit3": "Opportunity to receive job offers right after the event",
+    "benefit4": "Experience the Showcase of Top 20 Finalists from Supercent AI Game Video Challenge",
+    "benefit5": "Participate in mini-games, networking and win exciting prizes!",
+    "benefit6": "Opportunity to meet and learn directly from international experts in AI, Gaming and Creative Technology"
+  },
+  "hub": {
+    "title": "THE HUB OF K-TECH",
+    "subtitle": "Where creativity meets technology",
+    "mainTitle": "Vietnam - Korea Job Connection",
+    "bullet1": "Meet Korean companies in technology, AI and gaming.",
+    "bullet2": "Direct interviews, career opportunities and international workforce collaboration.",
+    "registerBtn": "Register Now",
+    "position": "Position",
+    "companySlots": "Slots",
+    "website": "Website",
+    "viewMore": "View More",
+    "companies": {
+      "supercent": "Develops and provides application software",
+      "fpt": "Develops system and application software",
+      "matchably": "Management consulting",
+      "camon": "Develops and provides software",
+      "jinochem": "Manufactures sensor coatings and specialty chemicals",
+      "logfi": "Distributes and retails cosmetics",
+      "lumicarft": "Develops and provides application software",
+      "bos": "Manufactures semiconductors and integrated circuits",
+      "mrbcare": "",
+      "shinhan": "Banking, cards, and financial investment"
+    }
+  },
+  "registration": {
+    "title": "REGISTRATION STEPS",
+    "step1": {
+      "title": "Step 1",
+      "description": "Fill out the registration form"
+    },
+    "step2": {
+      "title": "Step 2:",
+      "description": "Receive confirmation email with QR check-in code"
+    },
+    "step3": {
+      "title": "Step 3:",
+      "description": "Receive email with recruitment positions list and event instructions. (2 days before event)"
+    },
+    "step4": {
+      "title": "Step 4",
+      "description": "Join the event following email instructions"
+    },
+    "cta": {
+      "title": "REGISTER TODAY",
+      "subtitle": "Your CV will be prioritized for review before the event!",
+      "description1": "Complete the registration form and companies will review candidates to prioritize applications that match their requirements.",
+      "description2": "Register early to gain a competitive edge, get feedback before other candidates, and secure attractive job opportunities right at the event!",
+      "button": "Register Now"
+    },
+    "form": {
+      "title": "Register now for the K-Tech Innovation Hub 2025!",
+      "subtitle": "Please enter accurate information so the organizers can contact you with event details and employers can properly assess your experience.",
+      "fullName": "Full Name",
+      "phone": "Phone Number",
+      "currentPosition": "Current Position",
+      "selectOption": "Select",
+      "student": "University / College / Vocational Student",
+      "graduate": "Recent Graduate",
+      "working": "Currently Working",
+      "experience": "Years of Experience",
+      "major": "Field of Study",
+      "majorPlaceholder": "Software Engineering",
+      "cvUpload": "Upload CV (PDF format)",
+      "removeFile": "Remove File",
+      "referralSource": "How did you hear about this event?",
+      "fanpageIgLinkedin": "LIKELION Vietnam Fanpage / IG / LinkedIn",
+      "metaAds": "Meta Ads",
+      "vietnamwork": "VietnamWorks",
+      "itviec": "ITVIEC",
+      "emailMarketing": "Email Marketing",
+      "blogKtech": "Former K-Tech College Student / Candidate",
+      "friends": "Friends / Family Referral",
+      "termsTitle1": "I have read and agree to the",
+      "terms": "Privacy Policy",
+      "termsTitle2": "of the program",
+      "submit": "Register Now",
+      "successMessage": "Registration submitted successfully!",
+      "errorMessage": "An error occurred. Please try again.",
+      "submitting": "Submitting...",
+      "requiredName": "Please enter your full name.",
+      "requiredPhone": "Please enter your phone number.",
+      "requiredEmail": "Please enter your email.",
+      "invalidEmail": "Invalid email address.",
+      "requiredPosition": "Please select your current position.",
+      "requiredExperience": "Please enter your experience.",
+      "requiredMajor": "Please enter your major.",
+      "requiredReferral": "Please select how you heard about the event.",
+      "termsError": "You must agree to the privacy policy",
+      "cvUploadHint": "Drag and drop or click to upload your CV (optional).",
+      "cvUploadFormat": "Accepted: PDF, DOC, DOCX — max 4MB"
+    }
+  },
+  "supercent": {
+    "topic": {
+      "title": "TOPIC",
+      "description": "Create a game video advertisement (15–30 seconds) for one of Supercent’s games:",
+      "participantTitle": "Eligible Participants",
+      "participantDescription": "Content creators, video editors, marketers, developers, and anyone passionate about AI video creation.",
+      "joinNow": "Join Now",
+      "learnMore": "Learn More"
+    },
+    "prizes": {
+      "title": "PRIZES",
+      "specialTitle": "Special",
+      "specialDescription": "All individual/team winners will be directly advanced to the final interview round with Supercent (AI Ad Creative Team)."
+    },
+    "timeline": {
+      "title": "TIMELINE",
+      "event1": "Competition Launch",
+      "event2": "Submission Deadline",
+      "event3": "Top 20 Finalists Announcement",
+      "event4": "Final Round (Presentation, Exhibition, Award Ceremony)"
+    },
+    "organizer": {
+      "title": "CO-ORGANIZERS",
+      "likelionDesc1": "LIKELION is one of Korea's leading EdTech companies, with a network operating in over 10 countries including the US, Australia, Japan, Hong Kong and Vietnam. LIKELION pioneers in programming education, technology career guidance and connecting young programmers with businesses.",
+      "likelionDesc2": "In Vietnam, LIKELION focuses on building a dynamic tech community, implementing courses and projects from the Korean Government, partnering with stakeholders in developing young talent, contributing to digital transformation and innovation.",
+      "supercentDesc1": "SUPERCENT is a renowned game company from Korea, ranking in the Top 5 global game publishers with hit games like Pizza Ready, Burger Please!, Snake Clash...",
+      "supercentDesc2": "To date, SUPERCENT has achieved over 1.2 billion downloads globally, affirming its pioneering position in the world gaming industry."
+    }
+  },
+  "agenda": {
+    "title": "EVENT AGENDA",
+    "allDayTitle": "ALL DAY ACTIVITIES",
+    "morningTitle": "MORNING",
+    "afternoonTitle": "AFTERNOON",
+    "allDay": {
+      "event1": {
+        "title": "K-Tech Connect: Job Matching",
+        "description": "Interviews with Korean companies"
+      },
+      "event2": {
+        "title": "Supercent Creative Lab",
+        "description": "Audience votes for the most favorite video"
+      }
+    },
+    "morning": {
+      "event1": {
+        "title": "Check-in & Welcome",
+        "description": ""
+      },
+      "event2": {
+        "title": "Opening ceremony & Representatives speeches",
+        "description": ""
+      },
+      "event3": {
+        "title": "Introduction of Judges & Judging criteria",
+        "description": ""
+      },
+      "event4": {
+        "title": "Lunch break & Networking",
+        "description": ""
+      },
+      "event5": {
+        "title": "Finals - Supercent Creative Lab",
+        "description": ""
+      }
+    },
+    "afternoon": {
+      "event1": {
+        "title": "Supercent Game Industry Talk",
+        "description": ""
+      },
+      "event2": {
+        "title": "Finals - Supercent Creative Lab",
+        "description": ""
+      },
+      "event3": {
+        "title": "Mini Game",
+        "description": ""
+      },
+      "event4": {
+        "title": "Awards Ceremony - Supercent Creative Lab",
+        "description": ""
+      },
+      "event5": {
+        "title": "Closing",
+        "description": ""
+      }
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "faq1": {
+      "question": "Is there a fee to attend the event?",
+      "answer": "This event is completely free of charge."
+    },
+    "faq2": {
+      "question": "What are the requirements for registration?",
+      "answer": "You just need to register your information on the website, note the time and location to attend the event. Additionally, please upload your CV in English or your native language when registering and bring a printed copy when attending the event if you want to have direct interviews with Korean companies."
+    },
+    "faq3": {
+      "question": "Which companies will participate in this event?",
+      "answer": "All are Korean technology companies with headquarters in Korea or Vietnam."
+    },
+    "faq4": {
+      "question": "What job positions will be available at the event?",
+      "answer": "Over 30 job positions in Korea or Vietnam for talented programmers, including fresh graduates or those with many years of experience."
+    },
+    "faq5": {
+      "question": "Why do I need to register in advance?",
+      "answer": "Registering & uploading your CV on the website helps recruiters review and evaluate candidates in advance before the job fair, saving time to understand participating candidates better and increasing the chances of getting a job right at the event."
+    },
+    "faq6": {
+      "question": "Do companies require foreign language skills during interviews?",
+      "answer": "Having foreign language skills will be an advantage when interviewing and communicating with companies. However, if you are not confident about your language abilities, please rest assured as the event will have interpreters to support candidates during conversations and direct interviews."
+    },
+    "faq7": {
+      "question": "Is it required to attend the entire event?",
+      "answer": "The program does not mandate that you must participate in the entire event. However, we strongly encourage you to spend time exploring the various activities to familiarize yourself with the event and find the job that best suits you."
+    }
+  },
+  "footer": {
+    "contact": {
+      "title": "Contact Information",
+      "description": "Discover your tech potential with K-Tech College 2025. Expand your thinking, develop skills and connect with Korean enterprises."
+    },
+    "nav": {
+      "title": "Quick Links",
+      "participants": "Target Audience",
+      "benefits": "Benefits",
+      "activities": "Main Activities",
+      "faq": "FAQ"
+    },
+    "location": {
+      "title": "Location"
+    },
+    "copyright": "© 2025 LIKELION All rights reserved."
+  },
+  "privacy": {
+    "meta": {
+      "title": "Privacy Policy | K-Tech College Hackathon 2025",
+      "description": "Privacy Policy of K-Tech College Hackathon - Vietnam-Korea job connection event. Learn how we collect, use, and protect your personal information."
+    },
+    "title": "Privacy Policy",
+    "backButton": "Back",
+    "section1": {
+      "title": "1. Purpose:",
+      "content1": "This Privacy Policy governs the manner in which we collect, use, and disclose your personal information when you access and use this website (ktechjobfair.likelion.edu.vn).",
+      "content2": "This website is operated by LIKELION VIETNAM LIMITED LIABILITY COMPANY (hereinafter referred to as \"Company\", \"we\" or \"our\")."
+    },
+    "section2": {
+      "title": "2. Types of Information We Collect:",
+      "intro": "We collect two main types of information from you:",
+      "subsectionA": {
+        "title": "a. Contact Information & Work Experience:",
+        "content": "This is information that can be used to contact you, such as name, email address, phone number, current position, years of experience, major, and CV. We collect this information when you register for the job fair event."
+      },
+      "subsectionB": {
+        "title": "b. Other Information:",
+        "content": "This is information that cannot be used to identify you, such as IP address, web browser, and device type. We collect this non-personal information through the use of cookies and other technologies."
+      }
+    },
+    "section3": {
+      "title": "3. How We Use Your Information:",
+      "subsectionA": {
+        "title": "a. We use your information for the following purposes:",
+        "item1": "To process your registration for the job fair event",
+        "item2": "To evaluate your profile for job opportunities",
+        "item3": "To contact you about job fairs and other opportunities",
+        "item4": "To improve our Website and services",
+        "item5": "To comply with our legal obligations"
+      },
+      "subsectionB": {
+        "title": "b. How We Share Your Information:",
+        "intro": "We may share your information with the following third parties:",
+        "provider": {
+          "title": "Service Providers:",
+          "content": "We may share your information with service providers who help us operate the Website and provide our services, such as email service providers, SMS providers, and hosting service providers."
+        },
+        "employer": {
+          "title": "Employers:",
+          "content": "We may share your information with employers who have job opportunities that match your profile."
+        },
+        "law": {
+          "title": "Law Enforcement:",
+          "content": "We may share your information with law enforcement agencies if we believe it is necessary to comply with the law or protect our rights, yours, or those of others."
+        }
+      }
+    },
+    "section4": {
+      "title": "4. Your Choices:",
+      "content1": "You may choose not to provide personal information to us. However, if you do not provide personal information, you may not be able to register for the job fair event or use certain features of the website.",
+      "content2": "You may also choose to unsubscribe from receiving marketing emails from us. To unsubscribe, please click the unsubscribe link in any marketing email you receive from us."
+    },
+    "section5": {
+      "title": "5. Security of Your Information:",
+      "content": "We implement reasonable security measures to protect your personal information from unauthorized access, use, or disclosure. However, we cannot guarantee that your information will be secure from all security breaches."
+    },
+    "section6": {
+      "title": "6. Changes to This Policy:",
+      "content": "We may change this Policy at any time. We will notify you of any changes by posting the updated version of this Policy on the Website."
+    },
+    "section7": {
+      "title": "7. Contact Us:",
+      "content": "If you have any questions about this Policy, please contact us via email"
+    }
+  },
+  "thankYou": {
+    "meta": {
+      "title": "Thank You | K-Tech College Hackathon 2025",
+      "description": "Thank you for registering for K-Tech College Hackathon - Vietnam-Korea job connection event"
+    },
+    "message1": "You have successfully registered for K-TECH INNOVATION HUB.",
+    "message2": "See you at the event and don't forget to check your email for updates!",
+    "backButton": "Back to Home"
   }
 }

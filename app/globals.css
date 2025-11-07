@@ -1,1 +1,85 @@
 @import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: var(--font-mulish), sans-serif;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+
+  to {
+    opacity: 1;
+    max-height: 500px;
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.3s ease-out;
+}
+
+.language-select .ant-select-selector {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+  border-radius: 12px !important;
+  padding: 4px 12px !important;
+  height: auto !important;
+}
+
+.language-select .ant-select-selector:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.language-select .ant-select-arrow {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.language-select .ant-select-selection-item {
+  color: white !important;
+}
+
+/* Dropdown menu styles */
+.ant-select-dropdown {
+  background-color: #1a1b2e !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px !important;
+}
+
+.ant-select-item {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.ant-select-item:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.ant-select-item-option-selected {
+  background-color: rgba(139, 92, 246, 0.2) !important;
+  color: white !important;
+}
+
+.ant-form-item-label > label {
+  color: white !important;
+}

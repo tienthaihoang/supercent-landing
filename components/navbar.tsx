@@ -3,9 +3,11 @@
 import { site } from "@/config/site";
 import { Select } from "antd";
 import { useLocale, useTranslations } from "next-intl";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState, useTransition } from "react";
+import GradientButton from "./ui/GradientButton";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -26,151 +28,155 @@ export default function Navbar() {
   };
 
   return (
-    <>
-      <nav className="fixed top-0 left-0 w-full z-[99]">
-        <div className="container mx-auto px-4 py-3 md:py-4">
-          <div className="backdrop-blur-md bg-slate-900/80 shadow-lg border border-white/10 rounded-2xl px-4 md:px-6">
-            <div className="grid grid-cols-12 items-center py-3">
-              <div className="col-span-12 lg:col-span-8 lg:col-start-3 flex items-center justify-between">
-                <Link
-                  href="/"
-                  className="flex items-center transition-transform hover:scale-105"
-                >
-                  <div className="text-2xl font-black bg-gradient-to-r from-purple-400 via-indigo-400 to-blue-400 bg-clip-text text-transparent">
-                    Daily Drop
-                  </div>
-                </Link>
+    <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-[99] w-[95%] max-w-7xl bg-[#1C1B1A]/50 backdrop-blur-[4px] shadow-[0_0_36px_rgba(0,109,184,0.25)] border border-white/10 rounded-2xl md:rounded-full">
+      <div className="flex items-center justify-between px-4 sm:px-6 md:px-9 lg:px-12 py-3 md:py-4">
+        {/* Logo */}
+        <Link href="/" className="flex items-center flex-shrink-0">
+          <Image
+            src="/logo.svg"
+            alt="Logo"
+            width={128}
+            height={40}
+            className="h-7 w-auto sm:h-8 md:h-10"
+          />
+        </Link>
 
-                <div className="lg:hidden flex items-center gap-3">
-                  <Select
-                    value={locale}
-                    onChange={onLanguageChange}
-                    options={[
-                      { value: "en", label: "EN" },
-                      { value: "vi", label: "VI" },
-                    ]}
-                    className="w-16"
-                    size="middle"
-                    disabled={isPending}
-                  />
+        {/* Menu desktop */}
+        <div className="hidden lg:flex items-center gap-4 xl:gap-6">
+          {site.routes.map((item, idx) => (
+            <Link
+              key={idx}
+              href={item.path}
+              className="text-white/80 hover:text-white font-medium transition-all duration-200 hover:scale-105 text-sm xl:text-base whitespace-nowrap"
+            >
+              {t(item.title)}
+            </Link>
+          ))}
 
-                  <button
-                    onClick={() => setOpen(!open)}
-                    aria-label="Toggle menu"
-                    className="text-white focus:outline-none hover:scale-110 transition-transform p-1"
-                  >
-                    {open ? (
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    ) : (
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth={1.5}
-                        stroke="currentColor"
-                        className="w-6 h-6"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                        />
-                      </svg>
-                    )}
-                  </button>
-                </div>
+          <Select
+            value={locale}
+            onChange={onLanguageChange}
+            options={[
+              { value: "vi", label: "🇻🇳 VI" },
+              { value: "en", label: "🇺🇸 EN" },
+            ]}
+            className="language-select w-24"
+            size="large"
+            disabled={isPending}
+            classNames={{
+              popup: {
+                root: "language-select-dropdown",
+              },
+            }}
+          />
 
-                <div className="hidden lg:flex lg:items-center lg:space-x-6">
-                  {site.routes.map((item, idx) => (
-                    <Link
-                      key={idx}
-                      href={item.path}
-                      className="font-semibold text-slate-300 hover:text-white transition-all hover:scale-110"
-                    >
-                      {t(item.title)}
-                    </Link>
-                  ))}
+          <GradientButton
+            title={t("register")}
+            onClick={() => {
+              const formEl = document.getElementById("registration-form");
+              formEl?.scrollIntoView({ behavior: "smooth" });
+            }}
+          />
+        </div>
 
-                  <Select
-                    value={locale}
-                    onChange={onLanguageChange}
-                    options={[
-                      { value: "en", label: "🇺🇸 EN" },
-                      { value: "vi", label: "🇻🇳 VI" },
-                    ]}
-                    className="w-28"
-                    size="large"
-                    disabled={isPending}
-                  />
-
-                  {/* <button
-                    onClick={() => setContactModalOpen(true)}
-                    className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold px-6 py-2.5 rounded-xl shadow-lg shadow-purple-900/50 hover:shadow-xl hover:shadow-purple-800/50 transition-all duration-300 hover:scale-105"
-                  >
-                    {t("contact")}
-                  </button> */}
-                </div>
-              </div>
-
-              <div
-                className={`col-span-12 lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-                  open ? "max-h-96 opacity-100 mt-4" : "max-h-0 opacity-0"
-                }`}
+        {/* Language + Mobile toggle */}
+        <div className="flex items-center gap-2 sm:gap-3 lg:hidden">
+          <Select
+            value={locale}
+            onChange={onLanguageChange}
+            options={[
+              { value: "vi", label: "VI" },
+              { value: "en", label: "EN" },
+            ]}
+            className="language-select w-16"
+            size="middle"
+            disabled={isPending}
+            classNames={{
+              popup: {
+                root: "language-select-dropdown",
+              },
+            }}
+          />
+          <button
+            onClick={() => setOpen(!open)}
+            aria-label="Toggle menu"
+            className="text-white! hover:scale-110 transition-transform p-1"
+          >
+            {open ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 sm:h-6 sm:w-6"
+                viewBox="0 0 20 20"
+                fill="currentColor"
               >
-                <div className="col-span-12 lg:hidden flex flex-col space-y-4 mt-4 pb-4 border-t border-white/10 pt-4">
-                  {site.routes.map((item, idx) => (
-                    <Link
-                      key={idx}
-                      href={item.path}
-                      onClick={() => setOpen(false)}
-                      className={`font-semibold text-slate-300 hover:text-white transition-all hover:scale-105 transform ${
-                        open
-                          ? "translate-y-0 opacity-100"
-                          : "-translate-y-4 opacity-0"
-                      }`}
-                      style={{
-                        transitionDelay: open ? `${idx * 50}ms` : "0ms",
-                      }}
-                    >
-                      {t(item.title)}
-                    </Link>
-                  ))}
+                <path
+                  fillRule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-5 h-5 sm:w-6 sm:h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            )}
+          </button>
+        </div>
+      </div>
 
-                  {/* <button
-                    onClick={() => {
-                      setContactModalOpen(true);
-                      setOpen(false);
-                    }}
-                    className={`bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold px-6 py-3 rounded-xl shadow-lg shadow-purple-900/50 transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2 transform ${
-                      open
-                        ? "translate-y-0 opacity-100"
-                        : "-translate-y-4 opacity-0"
-                    }`}
-                    style={{
-                      transitionDelay: open
-                        ? `${site.routes.length * 50}ms`
-                        : "0ms",
-                    }}
-                  >
-                    {t("contact")}
-                  </button> */}
-                </div>
-              </div>
-            </div>
+      {/* Mobile menu */}
+      {open && (
+        <div className="lg:hidden animate-slideDown">
+          <div className="flex flex-col space-y-3 sm:space-y-4 px-4 sm:px-6 md:px-9 pb-5 sm:pb-6 border-t border-white/10 pt-3 sm:pt-4">
+            {site.routes.map((item, idx) => (
+              <Link
+                key={idx}
+                href={item.path}
+                onClick={() => setOpen(false)}
+                className="text-white/80 hover:text-white transition-all font-medium text-sm sm:text-base py-1"
+                style={{
+                  animation: `fadeInUp 0.3s ease-out ${idx * 0.05}s both`,
+                }}
+              >
+                {t(item.title)}
+              </Link>
+            ))}
+            <Link
+              href="#register"
+              onClick={() => setOpen(false)}
+              className="
+                h-10 sm:h-11 px-6 sm:px-9
+                rounded-full text-white font-semibold
+                flex items-center justify-center
+                transition-all duration-300 ease-in-out
+                shadow-[0_0_20px_rgba(122,92,255,0.6)]
+                hover:scale-105
+                bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500
+                text-sm sm:text-base
+                mt-1
+              "
+              style={{
+                animation: `fadeInUp 0.3s ease-out ${
+                  site.routes.length * 0.05
+                }s both`,
+              }}
+            >
+              {t("register")}
+            </Link>
           </div>
         </div>
-      </nav>
-    </>
+      )}
+    </nav>
   );
 }

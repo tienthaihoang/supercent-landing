@@ -1,8 +1,357 @@
 {
   "nav": {
-    "subscription": "Mô tả",
-    "pricing": "Gía",
+    "participants": "Đối tượng tham gia",
+    "benefits": "Quyền lợi tham gia",
+    "activities": "Hoạt động chính",
     "faq": "FAQ",
-    "contact": "Contact us"
+    "register": "Đăng ký ngay"
+  },
+  "hero": {
+    "date": "Thứ 3, Ngày 25.11.2025",
+    "time": "9:00 - 17:00",
+    "location": "Tầng 23, Tòa Nhà The Mett, TP. HCM",
+    "days": "Ngày",
+    "hours": "Giờ",
+    "minutes": "Phút",
+    "seconds": "Giây"
+  },
+  "about": {
+    "title": "GIỚI THIỆU",
+    "content1": "**K-Tech Innovation Hub 2025** là sự kiện trong điểm thuộc khuôn khổ chương trình **K-Tech College 2025**, do **LIKELION Vietnam** phối hợp cùng **KOSME Cơ quan Hỗ trợ Doanh nghiệp vừa và nhỏ & Khởi nghiệp Hàn Quốc** và **JobKorea Nền tảng tuyển dụng Hàn Quốc** tổ chức, với sự tài trợ 100% từ **Chính phủ Hàn Quốc**.",
+    "content2": "Sự kiện mang đến **không gian giao thoa giữa sáng tạo và công nghệ**, nơi các bạn trẻ được **học hỏi, kết nối, khám phá cơ hội nghề nghiệp và hợp tác cùng doanh nghiệp Việt – Hàn** trong lĩnh vực **AI, sáng tạo, game và công nghệ số**."
+  },
+  "partners": {
+    "title": "ĐƠN VỊ CÙNG ĐỒNG HÀNH VÀ TÀI TRỢ"
+  },
+  "audience": {
+    "title": "ĐỐI TƯỢNG THAM GIA",
+    "student": {
+      "description": "Dành cho sinh viên và người đi làm trong lĩnh vực IT, Truyền thông, Marketing và Thiết kế sáng tạo"
+    },
+    "business": {
+      "description": "Ứng viên mong muốn làm việc tại doanh nghiệp Hàn Quốc, đặc sủng khóm phối có tỉnh nghị nghiệp toàn cầu"
+    },
+    "youth": {
+      "description": "Người yêu thích AI và đam mê ứng dụng công nghệ để tạo ra giá trị mới"
+    },
+    "creator": {
+      "description": "Những tâm hồn sáng tạo, đảm thú thách và muốn bột phù giá độ hợp bồn thêm"
+    }
+  },
+  "benefits": {
+    "title": "QUYỀN LỢI THAM GIA",
+    "benefit1": "Phỏng vấn trực tiếp cùng doanh nghiệp Hàn Quốc",
+    "benefit2": "Hơn 30 vị trí IT hấp dẫn, hơn 100 slot tuyển dụng dành cho ứng viên tiềm năng",
+    "benefit3": "Cơ hội nhận offer làm việc ngay sau sự kiện",
+    "benefit4": "Trải nghiệm Showcase Top 20 Finalists của cuộc thi Supercent AI Game Video Challenge",
+    "benefit5": "Tham gia mini-game, giao lưu và rinh về nhiều phần quà hấp dẫn!",
+    "benefit6": "Cơ hội gặp gỡ và học hỏi trực tiếp từ chuyên gia quốc tế trong lĩnh vực AI, Game và Công nghệ sáng tạo"
+  },
+  "hub": {
+    "title": "THE HUB OF K-TECH",
+    "subtitle": "Nơi giao thoa giữa sáng tạo và công nghệ",
+    "mainTitle": "Kết nối việc làm Việt - Hàn",
+    "bullet1": "Gặp gỡ doanh nghiệp Hàn Quốc trong lĩnh vực công nghệ, AI và game.",
+    "bullet2": "Phỏng vấn trực tiếp, kết nối cơ hội nghề nghiệp và hợp tác nhân lực quốc tế.",
+    "registerBtn": "Đăng ký ngay",
+    "position": "Vị trí",
+    "companySlots": "Số lượng",
+    "website": "Website",
+    "viewMore": "Xem thêm",
+    "companies": {
+      "supercent": "Phát triển & cung cấp phần mềm ứng dụng",
+      "fpt": "Phát triển hệ thống & phần mềm ứng dụng",
+      "matchably": "Tư vấn quản lý",
+      "camon": "Phát triển & cung cấp phần mềm",
+      "jinochem": "Sản xuất sơn cảm biến & hóa chất đặc thù",
+      "logfi": "Phân phối & bán lẻ mỹ phẩm",
+      "lumicarft": "Phát triển & cung cấp phần mềm ứng dụng",
+      "bos": "Sản xuất vi mạch & thiết bị bán dẫn",
+      "mrbcare": "",
+      "shinhan": "Ngân hàng, thẻ & đầu tư tài chính"
+    }
+  },
+  "registration": {
+    "title": "CÁC BƯỚC THAM GIA",
+    "step1": {
+      "title": "Bước 1",
+      "description": "Điền đơn đăng ký"
+    },
+    "step2": {
+      "title": "Bước 2:",
+      "description": "Nhận email xác nhận đăng ký thành công & mã QR check-in"
+    },
+    "step3": {
+      "title": "Bước 3:",
+      "description": "Nhận email danh sách vị trí tuyển dụng và hướng dẫn đến sự kiện. (2 ngày trước sự kiện)"
+    },
+    "step4": {
+      "title": "Bước 4:",
+      "description": "Đến tham gia sự kiện theo email hướng dẫn"
+    },
+    "cta": {
+      "title": "ĐĂNG KÝ NGAY HÔM NAY",
+      "subtitle": "CV của bạn sẽ được ưu tiên xem xét trước khi sự kiện!",
+      "description1": "Siêu ưu đãi hoàn tất form đăng ký, doanh nghiệp sẽ thẩm tra ứng viên và đưa bạn ưu tiên trong tin của bạn để doanh giải qua có ứng mục để phù hợp.",
+      "description2": "Đăng ký sớm để tạp có thế cạnh tranh, góp ý từ trước các ứng viên khác và nêm bật cơ hội việc làm hấp dẫn ngay tại sự kiện!",
+      "button": "Đăng ký ngay"
+    },
+    "form": {
+      "title": "Đăng ký sự kiện K-Tech Innovation Hub 2025 ngay!",
+      "subtitle": "Vui lòng nhập đúng thông tin để ban tổ chức liên hệ hướng dẫn tham gia sự kiện & nhà tuyển dụng đánh giá được kinh nghiệm của bạn.",
+      "fullName": "Họ tên",
+      "phone": "Số điện thoại",
+      "currentPosition": "Vị trí hiện tại",
+      "selectOption": "Chọn",
+      "student": "Đang học Đại học / Cao đẳng / Nghề",
+      "graduate": "Mới tốt nghiệp",
+      "working": "Đã đi làm",
+      "experience": "Số năm kinh nghiệm",
+      "major": "Chuyên ngành học",
+      "majorPlaceholder": "Kỹ thuật phần mềm",
+      "cvUpload": "Tải lên CV (định dạng PDF)",
+      "removeFile": "Xóa tệp",
+      "referralSource": "Tôi biết đến sự kiện qua",
+      "fanpageIgLinkedin": "Fanpage / IG / LinkedIn LIKELION Vietnam",
+      "metaAds": "Meta Ads",
+      "vietnamwork": "VietnamWork",
+      "itviec": "ITVIEC",
+      "emailMarketing": "Email marketing",
+      "blogKtech": "Từng là học viên/ Ứng viên K-Tech College",
+      "friends": "Bạn bè/ Người thân giới thiệu",
+      "termsTitle1": "Tôi đã đọc và đồng ý với",
+      "terms": "Chính sách bảo mật",
+      "termsTitle2": "của chương trình",
+      "submit": "Đăng ký ngay",
+      "successMessage": "Gửi đăng ký thành công!",
+      "errorMessage": "Có lỗi xảy ra. Vui lòng thử lại.",
+      "submitting": "Đang gửi...",
+      "requiredName": "Vui lòng nhập họ tên.",
+      "requiredPhone": "Vui lòng nhập số điện thoại.",
+      "requiredEmail": "Vui lòng nhập email.",
+      "invalidEmail": "Email không hợp lệ.",
+      "requiredPosition": "Vui lòng chọn vị trí hiện tại.",
+      "requiredExperience": "Vui lòng nhập số năm kinh nghiệm.",
+      "requiredMajor": "Vui lòng nhập chuyên ngành học.",
+      "requiredReferral": "Vui lòng chọn nguồn bạn biết đến sự kiện.",
+      "termsError": "Vui lòng đồng ý với chính sách bảo mật",
+      "cvUploadHint": "Kéo & thả hoặc nhấn để chọn CV (không bắt buộc).",
+      "cvUploadFormat": "Chấp nhận: PDF, DOC, DOCX — tối đa 4MB"
+    }
+  },
+  "supercent": {
+    "topic": {
+      "title": "CHỦ ĐỀ",
+      "description": "Tạo video quảng cáo game (15–30 giây) cho một trong các tựa game của Supercent:",
+      "participantTitle": "Đối tượng tham gia",
+      "participantDescription": "Content creator, video editor, marketer, developer và những ai yêu thích sáng tạo với AI Video.",
+      "joinNow": "Tham gia ngay",
+      "learnMore": "Xem thêm"
+    },
+    "prizes": {
+      "title": "GIẢI THƯỞNG",
+      "specialTitle": "Đặc biệt",
+      "specialDescription": "Tất cả các cá nhân/đội nhóm đoạt giải sẽ được TUYỂN THẲNG vào vòng phỏng vấn cuối cùng của Supercent (AI Ad Creative Team)."
+    },
+    "timeline": {
+      "title": "TIMELINE",
+      "event1": "Khởi động cuộc thi",
+      "event2": "Hạn chót nộp sản phẩm",
+      "event3": "Công bố Top 20 vào Chung kết",
+      "event4": "Chung kết cuộc thi (Thuyết trình, triển lãm, trao giải)"
+    },
+    "organizer": {
+      "title": "ĐỒNG TỔ CHỨC",
+      "likelionDesc1": "LIKELION là một trong những công ty EdTech hàng đầu Hàn Quốc, với mạng lưới hoạt động tại hơn 10 quốc gia như Mỹ, Úc, Nhật Bản, Hồng Kông và Việt Nam. LIKELION tiên phong trong lĩnh vực đào tạo lập trình, định hướng nghề nghiệp công nghệ và kết nối lập trình viên trẻ với doanh nghiệp.",
+      "likelionDesc2": "Tại Việt Nam, LIKELION tập trung xây dựng cộng đồng công nghệ năng động, triển khai các khóa học và dự án từ Chính phủ Hàn Quốc, đồng hành cùng các đối tác trong việc phát triển nhân lực trẻ, góp phần thúc đẩy chuyển đổi số và đổi mới sáng tạo.",
+      "supercentDesc1": "SUPERCENT là công ty game đình đám đến từ Hàn Quốc, lọt Top 5 nhà phát hành game toàn cầu với những tựa game hot như Pizza Ready, Burger Please!, Snake Clash...",
+      "supercentDesc2": "Tính đến nay, SUPERCENT đã thu về hơn 1.2 tỷ lượt tải trên toàn cầu, khẳng định vị thế tiên phong trong ngành game thế giới."
+    }
+  },
+  "agenda": {
+    "title": "AGENDA DỰ KIẾN",
+    "allDayTitle": "NỘI DUNG XUYÊN SUỐT",
+    "morningTitle": "BUỔI SÁNG",
+    "afternoonTitle": "BUỔI CHIỀU",
+    "allDay": {
+      "event1": {
+        "title": "K-Tech Connect: Job Matching",
+        "description": "Phỏng vấn cùng doanh nghiệp Hàn Quốc"
+      },
+      "event2": {
+        "title": "Supercent Creative Lab",
+        "description": "Khán giả bình chọn Video được yêu thích nhất"
+      }
+    },
+    "morning": {
+      "event1": {
+        "title": "Check in & Đón khách",
+        "description": ""
+      },
+      "event2": {
+        "title": "Khai mạc sự kiện & Đại diện phát biểu",
+        "description": ""
+      },
+      "event3": {
+        "title": "Giới thiệu BGK & Tiêu chí chấm điểm",
+        "description": ""
+      },
+      "event4": {
+        "title": "Nghỉ trưa & Networking",
+        "description": ""
+      },
+      "event5": {
+        "title": "Chung kết - Supercent Creative Lab",
+        "description": ""
+      }
+    },
+    "afternoon": {
+      "event1": {
+        "title": "Supercent Game Industry Talk",
+        "description": ""
+      },
+      "event2": {
+        "title": "Chung kết - Supercent Creative Lab",
+        "description": ""
+      },
+      "event3": {
+        "title": "Mini Game",
+        "description": ""
+      },
+      "event4": {
+        "title": "Trao giải - Supercent Creative Lab",
+        "description": ""
+      },
+      "event5": {
+        "title": "Bế mạc",
+        "description": ""
+      }
+    }
+  },
+  "faq": {
+    "title": "Các câu hỏi thường gặp",
+    "faq1": {
+      "question": "Sự kiện có thu phí tham dự không?",
+      "answer": "Sự kiện này hoàn toàn miễn phí bạn nhé."
+    },
+    "faq2": {
+      "question": "Yêu cầu khi đăng ký sự kiện?",
+      "answer": "Bạn chỉ cần đăng ký thông tin trên website, lưu lại ngay giờ và địa điểm để tham dự sự kiện. Ngoài ra, hãy tải lên CV tiếng Anh hoặc một nhật khi đăng ký và in mang theo khi tham gia sự kiện nếu bạn muốn phỏng vấn trực tiếp cùng doanh nghiệp Hàn Quốc."
+    },
+    "faq3": {
+      "question": "Các công ty nào sẽ tham gia sự kiện lần này?",
+      "answer": "Tất cả là công ty công nghệ Hàn Quốc có trụ sở tại Hàn Quốc hoặc Việt Nam."
+    },
+    "faq4": {
+      "question": "Vị trí công việc nào sẽ có tại sự kiện?",
+      "answer": "Hơn 30 vị trí công việc tại Hàn Quốc hoặc Việt Nam dành cho các bạn lập trình viên tài năng, kể cả các bạn mới ra trường hoặc đã có nhiều năm kinh nghiệm."
+    },
+    "faq5": {
+      "question": "Vì sao cần đăng ký tham gia trước?",
+      "answer": "Đăng ký & tải lên CV của bạn trên website giúp nhà tuyển dụng có thể xem và đánh giá trước nhằng lọc ưa bạn trước ngày hội, giành thời gian hiểu trước các ứng viên tham gia và tăng cơ hội được việc làm ngay tại sự kiện."
+    },
+    "faq6": {
+      "question": "Các công ty có yêu cầu ngoại ngữ lúc phỏng vấn không?",
+      "answer": "Việc có ngoại ngữ sẽ là một lợi thế khi phỏng vấn và trao đổi với doanh nghiệp. Tuy nhiên, nếu bạn chưa tự tin về khả năng ngoại ngữ, xin hoàn toàn yên tâm vì tại sự kiện đã có phiên dịch viên hỗ trợ ứng viên trong quá trình trò chuyện và phỏng vấn trực tiếp."
+    },
+    "faq7": {
+      "question": "Có yêu cầu phải tham dự toàn bộ sự kiện không?",
+      "answer": "Chương trình thông báo bắt buộc các bạn tham gia toàn bộ sự kiện. Bạn có thể khuyến khích các bạn dành thời gian tham khảo các hoạt động làm quen tại sự kiện và tìm được việc làm hợp nhất với bạn."
+    }
+  },
+  "footer": {
+    "contact": {
+      "title": "Thông tin liên hệ",
+      "description": "Khám phá tiềm năng công nghệ của bạn với K-Tech College 2025. Mở rộng tư duy, phát triển kỹ năng và kết nối với doanh nghiệp Hàn Quốc."
+    },
+    "nav": {
+      "title": "Liên kết nhanh",
+      "participants": "Đối tượng tham gia",
+      "benefits": "Quyền lợi tham gia",
+      "activities": "Hoạt động chính",
+      "faq": "FAQ"
+    },
+    "location": {
+      "title": "Địa điểm"
+    },
+    "copyright": "© 2025 LIKELION All rights reserved."
+  },
+  "privacy": {
+    "meta": {
+      "title": "Chính sách bảo mật | K-Tech College Hackathon 2025",
+      "description": "Chính sách bảo mật của College Hackathon - sự kiện kết nối việc làm Việt - Hàn. Tìm hiểu cách chúng tôi thu thập, sử dụng và bảo vệ thông tin cá nhân của bạn."
+    },
+    "title": "Chính sách bảo mật",
+    "backButton": "Quay lại",
+    "section1": {
+      "title": "1. Mục đích:",
+      "content1": "Chính sách bảo mật này quy định cách thức thu thập, sử dụng và tiết lộ thông tin cá nhân của bạn khi bạn truy cập và sử dụng trang web này (ktechjobfair.likelion.edu.vn).",
+      "content2": "Trang web này được điều hành bởi Công ty TNHH LIKELION VIETNAM (Sau đây gọi tắt là \"Công ty\", \"chúng tôi\" hoặc \"của chúng tôi\")."
+    },
+    "section2": {
+      "title": "2. Loại thông tin chúng tôi thu thập:",
+      "intro": "Chúng tôi thu thập hai loại thông tin chính từ bạn:",
+      "subsectionA": {
+        "title": "a. Thông tin liên hệ & kinh nghiệm làm việc:",
+        "content": "Đây là thông tin có thể được sử dụng để liên hệ với bạn, chẳng hạn như tên, địa chỉ email, số điện thoại, vị trí hiện tại, số năm kinh nghiệm, chuyên ngành học & CV. Chúng tôi thu thập thông này khi bạn đăng ký tham gia sự kiện việc làm."
+      },
+      "subsectionB": {
+        "title": "b. Thông tin khác:",
+        "content": "Đây là thông tin không thể được sử dụng để xác định danh tính của bạn, chẳng hạn như địa chỉ IP, trình duyệt web và loại thiết bị. Chúng tôi thu thập thông tin phi cá nhân này thông qua việc sử dụng cookie và các công nghệ khác."
+      }
+    },
+    "section3": {
+      "title": "3. Cách chúng tôi sử dụng thông tin của bạn:",
+      "subsectionA": {
+        "title": "a. Chúng tôi sử dụng thông tin của bạn cho các mục đích sau:",
+        "item1": "Để xử lý đăng ký tham gia sự kiện việc làm của bạn",
+        "item2": "Để đánh giá hồ sơ của bạn cho các cơ hội việc làm",
+        "item3": "Để liên hệ với bạn về sự kiện việc làm và các cơ hội khác",
+        "item4": "Để cải thiện Trang web và dịch vụ của chúng tôi",
+        "item5": "Để thực hiện các nghĩa vụ pháp lý của chúng tôi"
+      },
+      "subsectionB": {
+        "title": "b. Cách chúng tôi chia sẻ thông tin của bạn:",
+        "intro": "Chúng tôi có thể chia sẻ thông tin của bạn với các bên thứ ba sau:",
+        "provider": {
+          "title": "Nhà cung cấp dịch vụ:",
+          "content": "Chúng tôi có thể chia sẻ thông tin của bạn với các nhà cung cấp dịch vụ giúp chúng tôi hoạt động Trang web và cung cấp dịch vụ của mình, chẳng hạn như nhà cung cấp dịch vụ email, sms và nhà cung cấp dịch vụ lưu trữ."
+        },
+        "employer": {
+          "title": "Nhà tuyển dụng:",
+          "content": "Chúng tôi có thể chia sẻ thông tin của bạn với các nhà tuyển dụng có cơ hội việc làm phù hợp với hồ sơ của bạn."
+        },
+        "law": {
+          "title": "Cơ quan thực thi pháp luật:",
+          "content": "Chúng tôi có thể chia sẻ thông tin của bạn với các cơ quan thực thi pháp luật nếu chúng tôi tin rằng điều đó cần thiết để tuân thủ luật pháp hoặc bảo vệ các quyền của chúng tôi, của bạn hoặc của những người khác."
+        }
+      }
+    },
+    "section4": {
+      "title": "4. Lựa chọn của bạn:",
+      "content1": "Bạn có thể chọn không cung cấp thông tin cá nhân cho chúng tôi. Tuy nhiên, nếu bạn không cung cấp thông tin cá nhân, bạn có thể không thể đăng ký tham gia sự kiện việc làm hoặc sử dụng một số tính năng của trang web.",
+      "content2": "Bạn cũng có thể chọn hủy đăng ký nhận email tiếp thị từ chúng tôi. Để hủy đăng ký, vui lòng nhấp vào liên kết hủy đăng ký trong bất kỳ email tiếp thị nào mà bạn nhận được từ chúng tôi."
+    },
+    "section5": {
+      "title": "5. Bảo mật thông tin của bạn:",
+      "content": "Chúng tôi thực hiện các biện pháp bảo mật hợp lý để bảo vệ thông tin cá nhân của bạn khỏi bị truy cập trái phép, sử dụng hoặc tiết lộ. Tuy nhiên, chúng tôi không thể đảm bảo rằng thông tin của bạn sẽ an toàn khỏi mọi vi phạm bảo mật."
+    },
+    "section6": {
+      "title": "6. Thay đổi đối với Chính sách này:",
+      "content": "Chúng tôi có thể thay đổi Chính sách này bất cứ lúc nào. Chúng tôi sẽ thông báo cho bạn về bất kỳ thay đổi nào bằng cách đăng phiên bản cập nhật của Chính sách này trên Trang web."
+    },
+    "section7": {
+      "title": "7. Liên hệ với chúng tôi:",
+      "content": "Nếu bạn có bất kỳ câu hỏi nào về Chính sách này, vui lòng liên hệ với chúng tôi qua email"
+    }
+  },
+  "thankYou": {
+    "meta": {
+      "title": "Cảm ơn bạn | K-Tech College Hackathon 2025",
+      "description": "Cảm ơn bạn đã đăng ký tham gia K-Tech College Hackathon - sự kiện kết nối việc làm Việt - Hàn"
+    },
+    "message1": "Bạn đã đăng ký tham gia K-TECH INNOVATION HUB thành công.",
+    "message2": "Hẹn gặp bạn tại sự kiện và đừng quên kiểm tra mail để cập nhật thông tin từ sự kiện nhé!",
+    "backButton": "Trở về trang chính"
   }
 }
