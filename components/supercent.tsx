@@ -210,7 +210,7 @@ export default function SupercentSection() {
                         {section.contentType === "timeline" && (
                           <div className="rounded-xl p-6 text-center">
                             <div className="relative w-full max-w-5xl mx-auto">
-                              <div className="hidden md:block absolute w-[75%] top-[53px] left-1/2 -translate-x-1/2 h-[2px] bg-cyan-400/50"></div>
+                              <div className="hidden md:block absolute w-[85%] top-[64px] left-1/2 -translate-x-1/2 h-[2px] bg-gradient-to-r from-[#FF69FF] via-[#FFDEFF] to-[#FF69FF]"></div>
 
                               <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-6 relative">
                                 {timelineEvents.map((event, idx) => (
@@ -224,12 +224,20 @@ export default function SupercentSection() {
                                     )}
 
                                     {/* Date */}
-                                    <div className="text-[#FF69FF] font-bold text-sm md:text-lg mb-3 md:mb-4">
+                                    <div className="bg-gradient-to-r from-[#FF69FF] to-[#FFDEFF] bg-clip-text text-transparent font-extrabold text-sm md:text-lg mb-3 md:mb-4">
                                       {event.date}
                                     </div>
 
-                                    {/* Circle on line */}
-                                    <div className="hidden md:block w-5 h-5 md:w-6 md:h-6 rounded-full bg-cyan-400 ring-4 ring-cyan-400/30 mb-3 md:mb-4"></div>
+                                    {/* Star on line */}
+                                    <div className="hidden md:block mb-3 md:mb-4">
+                                      <Image
+                                        src="/star-icon.svg"
+                                        alt="Star"
+                                        width={40}
+                                        height={40}
+                                        className="drop-shadow-[0_0_8px_rgba(232,121,249,0.6)]"
+                                      />
+                                    </div>
 
                                     {/* Vertical line + small dot (desktop only) */}
                                     <div className="hidden md:flex flex-col items-center">

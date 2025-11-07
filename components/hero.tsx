@@ -21,11 +21,10 @@ export default function HeroSection() {
   });
 
   const listImage = [
-    "/mss-logo.svg",
     "/kosme-logo.svg",
     "/likelion-logo.svg",
-    "/supercent-logo.svg",
     "/jobkorea-logo.svg",
+    "/shinhan-bank-logo.svg",
   ];
 
   useEffect(() => {
@@ -91,7 +90,7 @@ export default function HeroSection() {
             width={800}
             height={250}
             className="w-full max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-4xl h-auto"
-            style={{ maxHeight: "250px", objectFit: "contain" }}
+            style={{ maxHeight: "280px", objectFit: "contain" }}
             priority
           />
         </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 export default function AgendaSection() {
   const t = useTranslations("agenda");
@@ -78,14 +79,20 @@ export default function AgendaSection() {
   const TimelineItem = ({ time, titleKey, descKey }: any) => (
     <div className="flex gap-4 md:gap-6 group">
       {/* Timeline dot and line */}
-      <div className="flex flex-col items-center pt-[7px]">
-        <div className="w-4 h-4 rounded-full bg-cyan-400 ring-4 ring-cyan-400/30 group-hover:ring-8 transition-all duration-300 flex-shrink-0"></div>
+      <div className="flex flex-col items-center">
+        <Image
+          src="/star-icon.svg"
+          alt="Star"
+          width={40}
+          height={40}
+          className="drop-shadow-[0_0_8px_rgba(232,121,249,0.6)]"
+        />
         <div className="w-0.5 h-full bg-gradient-to-b from-cyan-400/50 to-transparent"></div>
       </div>
 
       {/* Content */}
       <div className="flex-1 pb-8">
-        <div className="text-[#FF69FF] font-bold text-base md:text-lg mb-1">
+        <div className="inline-block bg-gradient-to-r from-[#FF69FF] to-[#FFDEFF] bg-clip-text text-transparent font-bold text-base md:text-lg mb-1">
           {time}
         </div>
         <div className="text-white font-bold text-base md:text-lg mb-1">
@@ -109,9 +116,16 @@ export default function AgendaSection() {
 
           {/* All Day Events */}
           <div className="mb-12 md:mb-16">
-            <h3 className="text-xl md:text-2xl font-extrabold! text-white mb-6! uppercase tracking-wide">
-              {t("allDayTitle")}
-            </h3>
+             <div className="relative inline-block mb-6">
+                <div className="bg-[#229BFF] text-white font-black text-xl md:text-2xl px-8 py-3 rounded-lg uppercase tracking-wider">
+                  {t("allDayTitle")}
+                </div>
+
+                {/* Arrow pointing down-left at bottom left corner */}
+                <div className="absolute left-[20px] bottom-0 translate-y-full">
+                  <div className="w-0 h-0 border-t-[20px] border-t-[#229BFF] border-r-[20px] border-r-transparent"></div>
+                </div>
+              </div>
             <div className="space-y-0">
               {allDayEvents.map((event, index) => (
                 <TimelineItem key={index} {...event} />
@@ -123,9 +137,16 @@ export default function AgendaSection() {
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
             {/* Morning Events */}
             <div>
-              <h3 className="text-xl md:text-2xl font-extrabold! text-white mb-6! uppercase tracking-wide">
-                {t("morningTitle")}
-              </h3>
+              <div className="relative inline-block mb-6">
+                <div className="bg-[#229BFF] text-white font-black text-xl md:text-2xl px-8 py-3 rounded-lg uppercase tracking-wider">
+                  {t("morningTitle")}
+                </div>
+
+                {/* Arrow pointing down-left at bottom left corner */}
+                <div className="absolute left-[20px] bottom-0 translate-y-full">
+                  <div className="w-0 h-0 border-t-[20px] border-t-[#229BFF] border-r-[20px] border-r-transparent"></div>
+                </div>
+              </div>
               <div className="space-y-0">
                 {morningEvents.map((event, index) => (
                   <TimelineItem key={index} {...event} />
@@ -135,9 +156,16 @@ export default function AgendaSection() {
 
             {/* Afternoon Events */}
             <div>
-              <h3 className="text-xl md:text-2xl font-extrabold! text-white mb-6! uppercase tracking-wide">
-                {t("afternoonTitle")}
-              </h3>
+               <div className="relative inline-block mb-6">
+                <div className="bg-[#229BFF] text-white font-black text-xl md:text-2xl px-8 py-3 rounded-lg uppercase tracking-wider">
+                  {t("afternoonTitle")}
+                </div>
+
+                {/* Arrow pointing down-left at bottom left corner */}
+                <div className="absolute left-[20px] bottom-0 translate-y-full">
+                  <div className="w-0 h-0 border-t-[20px] border-t-[#229BFF] border-r-[20px] border-r-transparent"></div>
+                </div>
+              </div>
               <div className="space-y-0">
                 {afternoonEvents.map((event, index) => (
                   <TimelineItem key={index} {...event} />
