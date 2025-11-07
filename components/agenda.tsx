@@ -99,10 +99,7 @@ export default function AgendaSection() {
   );
 
   return (
-    <section
-      id="activities"
-      className="w-full bg-[#0A0B1E] py-16 md:py-20 lg:py-24 scroll-mt-[40px]"
-    >
+    <section className="w-full bg-[#0A0B1E] py-16 md:py-20 lg:py-24">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Title */}
@@ -112,7 +109,7 @@ export default function AgendaSection() {
 
           {/* All Day Events */}
           <div className="mb-12 md:mb-16">
-            <h3 className="text-xl md:text-2xl font-bold text-white mb-6! uppercase tracking-wide">
+            <h3 className="text-xl md:text-2xl font-extrabold! text-white mb-6! uppercase tracking-wide">
               {t("allDayTitle")}
             </h3>
             <div className="space-y-0">
@@ -126,7 +123,7 @@ export default function AgendaSection() {
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
             {/* Morning Events */}
             <div>
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-6! uppercase tracking-wide">
+              <h3 className="text-xl md:text-2xl font-extrabold! text-white mb-6! uppercase tracking-wide">
                 {t("morningTitle")}
               </h3>
               <div className="space-y-0">
@@ -138,7 +135,7 @@ export default function AgendaSection() {
 
             {/* Afternoon Events */}
             <div>
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-6! uppercase tracking-wide">
+              <h3 className="text-xl md:text-2xl font-extrabold! text-white mb-6! uppercase tracking-wide">
                 {t("afternoonTitle")}
               </h3>
               <div className="space-y-0">

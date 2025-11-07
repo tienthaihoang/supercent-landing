@@ -17,7 +17,7 @@
   },
   "about": {
     "title": "GIỚI THIỆU",
-    "content1": "**K-Tech Innovation Hub 2025** là sự kiện trong điểm thuộc khuôn khổ chương trình **K-Tech College 2025**, do **LIKELION Vietnam** phối hợp cùng **KOSME Cơ quan Hỗ trợ Doanh nghiệp vừa và nhỏ & Khởi nghiệp Hàn Quốc** và **JobKorea Nền tảng tuyển dụng Hàn Quốc** tổ chức, với sự tài trợ 100% từ **Chính phủ Hàn Quốc**.",
+    "content1": "**K-Tech College Hackathon 2025** là sự kiện trong điểm thuộc khuôn khổ chương trình **K-Tech College 2025**, do **LIKELION Vietnam** phối hợp cùng **KOSME Cơ quan Hỗ trợ Doanh nghiệp vừa và nhỏ & Khởi nghiệp Hàn Quốc** và **JobKorea Nền tảng tuyển dụng Hàn Quốc** tổ chức, với sự tài trợ 100% từ **Chính phủ Hàn Quốc**.",
     "content2": "Sự kiện mang đến **không gian giao thoa giữa sáng tạo và công nghệ**, nơi các bạn trẻ được **học hỏi, kết nối, khám phá cơ hội nghề nghiệp và hợp tác cùng doanh nghiệp Việt – Hàn** trong lĩnh vực **AI, sáng tạo, game và công nghệ số**."
   },
   "partners": {
@@ -97,7 +97,7 @@
       "button": "Đăng ký ngay"
     },
     "form": {
-      "title": "Đăng ký sự kiện K-Tech Innovation Hub 2025 ngay!",
+      "title": "Đăng ký sự kiện K-Tech College Hackathon 2025 ngay!",
       "subtitle": "Vui lòng nhập đúng thông tin để ban tổ chức liên hệ hướng dẫn tham gia sự kiện & nhà tuyển dụng đánh giá được kinh nghiệm của bạn.",
       "fullName": "Họ tên",
       "phone": "Số điện thoại",
@@ -278,8 +278,8 @@
   },
   "privacy": {
     "meta": {
-      "title": "Chính sách bảo mật | K-Tech College Hackathon 2025",
-      "description": "Chính sách bảo mật của College Hackathon - sự kiện kết nối việc làm Việt - Hàn. Tìm hiểu cách chúng tôi thu thập, sử dụng và bảo vệ thông tin cá nhân của bạn."
+      "title": "Chính sách bảo mật | KTC2025",
+      "description": "Chính sách bảo mật"
     },
     "title": "Chính sách bảo mật",
     "backButton": "Quay lại",
@@ -347,10 +347,10 @@
   },
   "thankYou": {
     "meta": {
-      "title": "Cảm ơn bạn | K-Tech College Hackathon 2025",
-      "description": "Cảm ơn bạn đã đăng ký tham gia K-Tech College Hackathon - sự kiện kết nối việc làm Việt - Hàn"
+      "title": "Hẹn gặp lại tại sự kiện | KTC2025",
+      "description": "Cảm ơn bạn đã đăng ký tham gia sự kiện K-Tech College Hackathon 2025"
     },
-    "message1": "Bạn đã đăng ký tham gia K-TECH INNOVATION HUB thành công.",
+    "message1": "Bạn đã đăng ký tham gia K-TECH COLLEGE HACKATHON thành công.",
     "message2": "Hẹn gặp bạn tại sự kiện và đừng quên kiểm tra mail để cập nhật thông tin từ sự kiện nhé!",
     "backButton": "Trở về trang chính"
   }

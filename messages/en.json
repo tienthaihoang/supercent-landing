@@ -17,7 +17,7 @@
   },
   "about": {
     "title": "ABOUT",
-    "content1": "**K-Tech Innovation Hub 2025** is a key event within the framework of **K-Tech College 2025**, organized by **LIKELION Vietnam** in collaboration with **KOSME - Korea SMEs and Startups Agency** and **JobKorea - Korean Recruitment Platform**, with **100%** funding from the **Korean Government**.",
+    "content1": "**K-Tech College Hackathon 2025** is a key event within the framework of **K-Tech College 2025**, organized by **LIKELION Vietnam** in collaboration with **KOSME - Korea SMEs and Startups Agency** and **JobKorea - Korean Recruitment Platform**, with **100%** funding from the **Korean Government**.",
     "content2": "The event creates a **space where creativity and technology converge**, where young people can **learn, connect, discover career opportunities and collaborate with Vietnamese - Korean** enterprises in the fields of **AI, creativity, gaming and digital technology**."
   },
   "partners": {
@@ -97,7 +97,7 @@
       "button": "Register Now"
     },
     "form": {
-      "title": "Register now for the K-Tech Innovation Hub 2025!",
+      "title": "Register now for the K-Tech College Hackathon 2025!",
       "subtitle": "Please enter accurate information so the organizers can contact you with event details and employers can properly assess your experience.",
       "fullName": "Full Name",
       "phone": "Phone Number",
@@ -278,8 +278,8 @@
   },
   "privacy": {
     "meta": {
-      "title": "Privacy Policy | K-Tech College Hackathon 2025",
-      "description": "Privacy Policy of K-Tech College Hackathon - Vietnam-Korea job connection event. Learn how we collect, use, and protect your personal information."
+      "title": "Privacy Policy | KTC2025",
+      "description": "Privacy Policy"
     },
     "title": "Privacy Policy",
     "backButton": "Back",
@@ -347,10 +347,10 @@
   },
   "thankYou": {
     "meta": {
-      "title": "Thank You | K-Tech College Hackathon 2025",
-      "description": "Thank you for registering for K-Tech College Hackathon - Vietnam-Korea job connection event"
+      "title": "See You at the Event | KTC2025",
+      "description": "Thank you for registering for K-Tech College Hackathon 2025"
     },
-    "message1": "You have successfully registered for K-TECH INNOVATION HUB.",
+    "message1": "You have successfully registered for K-TECH COLLEGE HACKATHON.",
     "message2": "See you at the event and don't forget to check your email for updates!",
     "backButton": "Back to Home"
   }

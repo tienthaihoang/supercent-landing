@@ -4,7 +4,6 @@ import { ChevronDown } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
-import GradientButton from "./ui/GradientButton";
 
 export default function SupercentSection() {
   const t = useTranslations("supercent");
@@ -36,7 +35,7 @@ export default function SupercentSection() {
   const games = [
     { name: "Pizza Ready", image: "/pizza-ready-game.png" },
     { name: "Snack Clash", image: "/snack-clash-game.png" },
-    { name: "XP Here", image: "/xp-here-game.png" },
+    { name: "XP Hero", image: "/xp-hero-game.png" },
     { name: "Lumber Chopper", image: "/lumber-chopper-game.png" },
   ];
 
@@ -167,22 +166,23 @@ export default function SupercentSection() {
                             </div>
 
                             <div className="flex justify-center gap-3 md:gap-4">
-                              <GradientButton
-                                onClick={() => {
-                                  const formEl =
-                                    document.getElementById(
-                                      "registration-form"
-                                    );
-                                  formEl?.scrollIntoView({
-                                    behavior: "smooth",
-                                  });
-                                }}
-                                title={t("topic.joinNow")}
-                              />
+                              <a
+                                href="https://forms.gle/3PwV29DmzLMMr2Ya7"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="px-6 py-2 md:px-8 md:py-3 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white text-sm md:text-base font-medium hover:bg-white hover:scale-105 transition"
+                              >
+                                {t("topic.joinNow")}
+                              </a>
 
-                              <button className="cursor-pointer px-6 py-2 md:px-8 md:py-3 rounded-full bg-white/90 text-[#2b1b5b] text-sm md:text-base font-medium hover:bg-white transition">
+                              <a
+                                href="https://docs.google.com/document/d/1oUOm2VixnnLyDLmP1q4X9sA84Km4gYfYZW4XS5SE5uE/edit?tab=t.0#heading=h.i8i9kciwy9ym"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="px-6 py-2 md:px-8 md:py-3 rounded-full bg-white/90 text-[#2b1b5b] text-sm md:text-base font-medium hover:bg-white hover:scale-105 transition"
+                              >
                                 {t("topic.learnMore")}
-                              </button>
+                              </a>
                             </div>
                           </div>
                         )}

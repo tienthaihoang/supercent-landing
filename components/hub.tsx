@@ -152,7 +152,10 @@ export default function HubSection() {
   ];
 
   return (
-    <section className="w-full bg-[#0A0B1E] py-16 md:py-20 lg:py-24">
+    <section
+      id="activities"
+      className="w-full bg-[#0A0B1E] py-16 md:py-20 lg:py-24 scroll-mt-[40px]"
+    >
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8! md:mb-12!">
