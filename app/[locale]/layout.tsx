@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
+
 import { routing } from "@/i18n/routing";
 import IntlProviderClient from "@/provider/IntlProviderClient";
 import "antd/dist/reset.css";
@@ -62,6 +65,26 @@ export default async function LocaleLayout({ children, params }: Props) {
             `,
           }}
         />
+
+        {/* ✅ Facebook Pixel */}
+        <Script
+          id="facebook-pixel"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              !function(f,b,e,v,n,t,s){
+                if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                n.queue=[];t=b.createElement(e);t.async=!0;
+                t.src=v;s=b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t,s)
+              }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+              fbq('init', '865110215480975'); 
+              fbq('track', 'PageView');
+            `,
+          }}
+        />
       </head>
       <body className="antialiased font-sans" suppressHydrationWarning>
         {/* ✅ Google Tag Manager (noscript fallback) */}
@@ -71,6 +94,16 @@ export default async function LocaleLayout({ children, params }: Props) {
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+
+        {/* ✅ Facebook Pixel (noscript fallback) */}
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src="https://www.facebook.com/tr?id=865110215480975&ev=PageView&noscript=1"
           />
         </noscript>
         <IntlProviderClient locale={locale} messages={messages}>
