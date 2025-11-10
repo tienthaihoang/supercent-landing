@@ -11,6 +11,8 @@ interface TimeLeft {
   seconds: number;
 }
 
+type EventStatus = "upcoming" | "live" | "ended";
+
 export default function HeroSection() {
   const t = useTranslations("hero");
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
@@ -19,6 +21,7 @@ export default function HeroSection() {
     minutes: 0,
     seconds: 0,
   });
+  const [eventStatus, setEventStatus] = useState<EventStatus>("upcoming");
 
   const listImage = [
     "/kosme-logo.svg",
@@ -28,23 +31,35 @@ export default function HeroSection() {
   ];
 
   useEffect(() => {
-    // Set target date: November 25, 2025
-    const targetDate = new Date("2025-11-25T09:00:00").getTime();
+    // Event start: November 25, 2025, 9:00 AM
+    const startDate = new Date("2025-11-25T09:00:00").getTime();
+    // Event end: November 25, 2025, 5:00 PM (17:00)
+    const endDate = new Date("2025-11-25T17:00:00").getTime();
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
-      const difference = targetDate - now;
+      const differenceToStart = startDate - now;
+      const differenceToEnd = endDate - now;
 
-      if (difference > 0) {
+      if (differenceToStart > 0) {
+        // Event hasn't started yet - show countdown
+        setEventStatus("upcoming");
         setTimeLeft({
-          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          days: Math.floor(differenceToStart / (1000 * 60 * 60 * 24)),
           hours: Math.floor(
-            (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+            (differenceToStart % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
           ),
-          minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
-          seconds: Math.floor((difference % (1000 * 60)) / 1000),
+          minutes: Math.floor(
+            (differenceToStart % (1000 * 60 * 60)) / (1000 * 60)
+          ),
+          seconds: Math.floor((differenceToStart % (1000 * 60)) / 1000),
         });
+      } else if (differenceToEnd > 0) {
+        // Event is live
+        setEventStatus("live");
       } else {
+        // Event has ended
+        setEventStatus("ended");
         clearInterval(timer);
       }
     }, 1000);
@@ -53,7 +68,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative min-h-screen w-full overflow-hidden bg-[#0A0B1E] pt-16 sm:pt-20 md:pt-24">
+    <section className="min-h-screen w-full overflow-hidden bg-[#0A0B1E] pt-16 sm:pt-20 md:pt-24">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -161,56 +176,77 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Countdown Timer */}
-        <div className="flex items-center justify-center mb-8 md:mb-12 px-2">
-          <div className="flex items-center gap-0 bg-gradient-to-b from-[#7250EF33] to-[#0F0A3333] backdrop-blur-md rounded-2xl sm:rounded-3xl md:rounded-full px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 border border-white/20 shadow-[0_0_36px_rgba(0,109,184,0.25)]">
-            {/* Days */}
-            <div className="flex flex-col items-center px-2 sm:px-3 md:px-4 lg:px-6">
-              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-0.5 sm:mb-1 tabular-nums">
-                {String(timeLeft.days).padStart(2, "0")}
-              </div>
-              <div className="text-[10px] sm:text-xs md:text-sm text-white/80 font-medium uppercase tracking-wider">
-                {t("days")}
-              </div>
-            </div>
+        {/* Countdown Timer or Live Event Badge - Hidden when ended */}
+        {eventStatus !== "ended" && (
+          <div className="flex items-center justify-center mb-8 md:mb-12 px-2">
+            {eventStatus === "upcoming" ? (
+              // Countdown Timer
+              <div className="flex items-center gap-0 bg-gradient-to-b from-[#7250EF33] to-[#0F0A3333] backdrop-blur-md rounded-2xl sm:rounded-3xl md:rounded-full px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 border border-white/20 shadow-[0_0_36px_rgba(0,109,184,0.25)]">
+                {/* Days */}
+                <div className="flex flex-col items-center px-2 sm:px-3 md:px-4 lg:px-6">
+                  <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-0.5 sm:mb-1 tabular-nums">
+                    {String(timeLeft.days).padStart(2, "0")}
+                  </div>
+                  <div className="text-[10px] sm:text-xs md:text-sm text-white/80 font-medium uppercase tracking-wider">
+                    {t("days")}
+                  </div>
+                </div>
 
-            <div className="h-8 sm:h-10 md:h-12 w-px bg-white/30 mx-1 sm:mx-1.5 md:mx-2"></div>
+                <div className="h-8 sm:h-10 md:h-12 w-px bg-white/30 mx-1 sm:mx-1.5 md:mx-2"></div>
 
-            {/* Hours */}
-            <div className="flex flex-col items-center px-2 sm:px-3 md:px-4 lg:px-6">
-              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-0.5 sm:mb-1 tabular-nums">
-                {String(timeLeft.hours).padStart(2, "0")}
-              </div>
-              <div className="text-[10px] sm:text-xs md:text-sm text-white/80 font-medium uppercase tracking-wider">
-                {t("hours")}
-              </div>
-            </div>
+                {/* Hours */}
+                <div className="flex flex-col items-center px-2 sm:px-3 md:px-4 lg:px-6">
+                  <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-0.5 sm:mb-1 tabular-nums">
+                    {String(timeLeft.hours).padStart(2, "0")}
+                  </div>
+                  <div className="text-[10px] sm:text-xs md:text-sm text-white/80 font-medium uppercase tracking-wider">
+                    {t("hours")}
+                  </div>
+                </div>
 
-            <div className="h-8 sm:h-10 md:h-12 w-px bg-white/30 mx-1 sm:mx-1.5 md:mx-2"></div>
+                <div className="h-8 sm:h-10 md:h-12 w-px bg-white/30 mx-1 sm:mx-1.5 md:mx-2"></div>
 
-            {/* Minutes */}
-            <div className="flex flex-col items-center px-2 sm:px-3 md:px-4 lg:px-6">
-              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-0.5 sm:mb-1 tabular-nums">
-                {String(timeLeft.minutes).padStart(2, "0")}
-              </div>
-              <div className="text-[10px] sm:text-xs md:text-sm text-white/80 font-medium uppercase tracking-wider">
-                {t("minutes")}
-              </div>
-            </div>
+                {/* Minutes */}
+                <div className="flex flex-col items-center px-2 sm:px-3 md:px-4 lg:px-6">
+                  <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-0.5 sm:mb-1 tabular-nums">
+                    {String(timeLeft.minutes).padStart(2, "0")}
+                  </div>
+                  <div className="text-[10px] sm:text-xs md:text-sm text-white/80 font-medium uppercase tracking-wider">
+                    {t("minutes")}
+                  </div>
+                </div>
 
-            <div className="h-8 sm:h-10 md:h-12 w-px bg-white/30 mx-1 sm:mx-1.5 md:mx-2"></div>
+                <div className="h-8 sm:h-10 md:h-12 w-px bg-white/30 mx-1 sm:mx-1.5 md:mx-2"></div>
 
-            {/* Seconds */}
-            <div className="flex flex-col items-center px-2 sm:px-3 md:px-4 lg:px-6">
-              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-0.5 sm:mb-1 tabular-nums">
-                {String(timeLeft.seconds).padStart(2, "0")}
+                {/* Seconds */}
+                <div className="flex flex-col items-center px-2 sm:px-3 md:px-4 lg:px-6">
+                  <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-0.5 sm:mb-1 tabular-nums">
+                    {String(timeLeft.seconds).padStart(2, "0")}
+                  </div>
+                  <div className="text-[10px] sm:text-xs md:text-sm text-white/80 font-medium uppercase tracking-wider">
+                    {t("seconds")}
+                  </div>
+                </div>
               </div>
-              <div className="text-[10px] sm:text-xs md:text-sm text-white/80 font-medium uppercase tracking-wider">
-                {t("seconds")}
+            ) : (
+              // Event is Live Badge
+              <div className="bg-gradient-to-r from-[#FF0080] via-[#FF4500] to-[#FF0080] backdrop-blur-md rounded-full px-8 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6 border border-white/30 shadow-[0_0_40px_rgba(255,0,128,0.5)] animate-pulse">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  {/* Live indicator dot */}
+                  <div className="relative flex h-3 w-3 sm:h-4 sm:w-4">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-3 w-3 sm:h-4 sm:w-4 bg-white"></span>
+                  </div>
+
+                  {/* Text */}
+                  <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white uppercase tracking-wide">
+                    {t("eventLive")}
+                  </span>
+                </div>
               </div>
-            </div>
+            )}
           </div>
-        </div>
+        )}
       </div>
 
       {/* Decorative Elements */}

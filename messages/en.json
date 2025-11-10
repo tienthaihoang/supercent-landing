@@ -4,16 +4,18 @@
     "benefits": "Benefits",
     "activities": "Main Activities",
     "faq": "FAQ",
-    "register": "Register Now"
+    "register": "Register Now",
+    "ended": "The event has ended"
   },
   "hero": {
-    "date": "Tue 25th, Nov 25.11.2025",
-    "time": "9:00 - 17:00",
-    "location": "Floor 23, The Mett, HCMC",
+    "date": "Tuesday, November 25, 2025",
+    "time": "9:00 AM - 5:00 PM",
+    "location": "23rd Floor, The Mett Building, HCMC",
     "days": "Days",
     "hours": "Hours",
     "minutes": "Minutes",
-    "seconds": "Seconds"
+    "seconds": "Seconds",
+    "eventLive": "Event is Live"
   },
   "about": {
     "title": "ABOUT",
@@ -26,16 +28,16 @@
   "audience": {
     "title": "TARGET AUDIENCE",
     "student": {
-      "description": "For students and professionals in IT, Communications, Marketing and Creative Design"
+      "description": "For students and professionals in IT, Media, Marketing, and Creative Design"
     },
     "business": {
-      "description": "Candidates who want to work at Korean companies, especially those with a global business mindset"
+      "description": "Candidates seeking opportunities at Korean companies, ready to explore global career prospects"
     },
     "youth": {
-      "description": "AI enthusiasts who are passionate about applying technology to create new value"
+      "description": "AI enthusiasts passionate about applying technology to create new value"
     },
     "creator": {
-      "description": "Creative souls who love challenges and want to break through to reach greater heights"
+      "description": "Creative minds who dare to challenge and break through their own limits"
     }
   },
   "benefits": {
@@ -136,7 +138,8 @@
       "requiredReferral": "Please select how you heard about the event.",
       "termsError": "You must agree to the privacy policy",
       "cvUploadHint": "Drag and drop or click to upload your CV (optional).",
-      "cvUploadFormat": "Accepted: PDF, DOC, DOCX — max 4MB"
+      "cvUploadFormat": "Accepted: PDF, DOC, DOCX — max 4MB",
+      "eventEnded": "The event has ended"
     }
   },
   "supercent": {

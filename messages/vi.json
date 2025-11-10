@@ -4,7 +4,8 @@
     "benefits": "Quyền lợi tham gia",
     "activities": "Hoạt động chính",
     "faq": "FAQ",
-    "register": "Đăng ký ngay"
+    "register": "Đăng ký ngay",
+    "ended": "Sự kiện đã kết thúc"
   },
   "hero": {
     "date": "Thứ 3, Ngày 25.11.2025",
@@ -13,7 +14,8 @@
     "days": "Ngày",
     "hours": "Giờ",
     "minutes": "Phút",
-    "seconds": "Giây"
+    "seconds": "Giây",
+    "eventLive": "Sự kiện đang diễn ra"
   },
   "about": {
     "title": "GIỚI THIỆU",
@@ -29,13 +31,13 @@
       "description": "Dành cho sinh viên và người đi làm trong lĩnh vực IT, Truyền thông, Marketing và Thiết kế sáng tạo"
     },
     "business": {
-      "description": "Ứng viên mong muốn làm việc tại doanh nghiệp Hàn Quốc, đặc sủng khóm phối có tỉnh nghị nghiệp toàn cầu"
+      "description": "Ứng viên mong muốn làm việc tại doanh nghiệp Hàn Quốc, sẵn sàng khám phá cơ hội nghề nghiệp toàn cầu"
     },
     "youth": {
       "description": "Người yêu thích AI và đam mê ứng dụng công nghệ để tạo ra giá trị mới"
     },
     "creator": {
-      "description": "Những tâm hồn sáng tạo, đảm thú thách và muốn bột phù giá độ hợp bồn thêm"
+      "description": "Những tâm hồn sáng tạo, dám thử thách và muốn bứt phá giới hạn bản thân"
     }
   },
   "benefits": {
@@ -136,7 +138,8 @@
       "requiredReferral": "Vui lòng chọn nguồn bạn biết đến sự kiện.",
       "termsError": "Vui lòng đồng ý với chính sách bảo mật",
       "cvUploadHint": "Kéo & thả hoặc nhấn để chọn CV (không bắt buộc).",
-      "cvUploadFormat": "Chấp nhận: PDF, DOC, DOCX — tối đa 4MB"
+      "cvUploadFormat": "Chấp nhận: PDF, DOC, DOCX — tối đa 4MB",
+      "eventEnded": "Sự kiện đã kết thúc"
     }
   },
   "supercent": {

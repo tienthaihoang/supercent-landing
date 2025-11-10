@@ -24,6 +24,7 @@ export default function IntlProviderClient({
       locale={locale}
       messages={messages}
       onError={handleError}
+      timeZone="Asia/Ho_Chi_Minh"
     >
       {children}
     </NextIntlClientProvider>

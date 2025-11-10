@@ -7,7 +7,7 @@ import { UploadFile } from "antd/es/upload/interface";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface RegistrationFormValues {
   fullName: string;
@@ -27,6 +27,9 @@ export default function RegistrationForm() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [fileList, setFileList] = useState<UploadFile[]>([]);
+  const [eventEnded, setEventEnded] = useState(false);
+
+  const eventEndTime = new Date("2025-11-25T17:00:00+07:00").getTime();
 
   const handleSubmit = async (values: RegistrationFormValues) => {
     try {
@@ -75,6 +78,21 @@ export default function RegistrationForm() {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      const now = Date.now();
+      const diff = eventEndTime - now;
+
+      if (diff <= 0) {
+        setEventEnded(true);
+        clearInterval(timer);
+        return;
+      }
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [eventEndTime]);
 
   return (
     <div
@@ -236,10 +254,19 @@ export default function RegistrationForm() {
             type="primary"
             htmlType="submit"
             loading={loading}
+            disabled={loading || eventEnded}
             size="large"
-            className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 border-0 font-bold rounded-xl transition-all duration-300 hover:scale-[1.02]"
+            className="w-full border-0 font-bold rounded-xl transition-all duration-300 hover:scale-[1.02]"
+            style={{
+              background:
+                loading || eventEnded
+                  ? "linear-gradient(to right, #9CA3AF, #6B7280)"
+                  : "bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500",
+              opacity: loading || eventEnded ? 0.7 : 1,
+              cursor: loading || eventEnded ? "not-allowed" : "pointer",
+            }}
           >
-            {t("form.submit")}
+            {t(eventEnded ? "form.eventEnded" : "form.submit")}
           </Button>
         </Form.Item>
       </Form>
