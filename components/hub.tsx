@@ -52,7 +52,7 @@ export default function HubSection() {
     },
     {
       id: 3,
-      name: "MATCHABLY",
+      name: "Guideway Consulting (Matchably)",
       logo: "/matchably-logo.png",
       description: t("companies.matchably"),
       positions: ["Full-stack Developer", "Frontend Developer", "AI Developer"],
@@ -65,7 +65,7 @@ export default function HubSection() {
       name: "Camon Social",
       logo: "/camon-logo.png",
       description: t("companies.camon"),
-      positions: ["Full-stack Developer"],
+      positions: ["Full-stack Developer", "QA"],
       slots: 2,
       website:
         "https://likelion.notion.site/K-Tech-Connect-Job-Matching-2a244860a4f48055bd34ccbc6ccadf48",
@@ -102,14 +102,14 @@ export default function HubSection() {
     },
     {
       id: 7,
-      name: "Lumicarft",
-      logo: "/lumicarft-logo.png",
-      description: t("companies.lumicarft"),
+      name: "Lumicraft",
+      logo: "/lumicraft-logo.png",
+      description: t("companies.lumicraft"),
       positions: [
         "Full-stack Developer",
         "Frontend Developer",
         "Backend Developer",
-        "AI Developer",
+        "App Developer",
       ],
       slots: 4,
       website:
@@ -131,23 +131,13 @@ export default function HubSection() {
     },
     {
       id: 9,
-      name: "Mr B Care",
-      logo: "/logfi-logo.png",
-      description: t("companies.mrbcare"),
-      positions: ["App Developer", "AI Developer"],
-      slots: "1 - 2",
-      website:
-        "https://likelion.notion.site/K-Tech-Connect-Job-Matching-2a244860a4f48055bd34ccbc6ccadf48",
-    },
-    {
-      id: 10,
-      name: "Shinhan Bank",
-      logo: "/shinhan-logo.png",
-      description: t("companies.shinhan"),
-      positions: [],
+      name: "Smart Build",
+      logo: "/smartbuild-logo.png",
+      description: t("companies.smartbuild"),
+      positions: ["Đang cập nhật"],
       slots: "",
       website:
-        "https://likelion.notion.site/K-Tech-Connect-Job-Matching-2a244860a4f48055bd34ccbc6ccadf48",
+        "https://smarterbuild.net/",
     },
   ];
 
