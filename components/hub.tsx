@@ -131,7 +131,7 @@ export default function HubSection() {
     },
     {
       id: 9,
-      name: "Smart Build",
+      name: "Smarter Build",
       logo: "/smartbuild-logo.png",
       description: t("companies.smartbuild"),
       positions: ["Đang cập nhật"],
