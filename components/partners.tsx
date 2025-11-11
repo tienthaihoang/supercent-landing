@@ -7,28 +7,22 @@ export default function PartnersSection() {
   const t = useTranslations("partners");
 
   const partners = [
-    // {
-    //   name: "Ministry of SMEs and Startups",
-    //   logo: "/mss-logo.svg",
-    //   width: 180,
-    //   height: 60,
-    // },
     {
       name: "KOSME",
       logo: "/kosme-logo.svg",
       width: 180,
       height: 60,
     },
-    // {
-    //   name: "Supercent",
-    //   logo: "/supercent-logo.svg",
-    //   width: 180,
-    //   height: 60,
-    // },
     {
       name: "Shinhan Bank",
-      logo: "/shinhan-bank-logo.svg",
+      logo: "/shinhan-logo.svg",
       width: 120,
+      height: 60,
+    },
+    {
+      name: "Likelion",
+      logo: "/likelion-logo.svg",
+      width: 180,
       height: 60,
     },
     {
@@ -50,7 +44,7 @@ export default function PartnersSection() {
             </h2>
 
             {/* Partner logos */}
-            <div className="flex flex-wrap justify-center items-center gap-10 md:gap-20">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-x-12 gap-y-8 md:gap-x-20 md:gap-y-12 max-w-3xl mx-auto">
               {partners.map((partner, index) => (
                 <div key={index} className="flex items-center justify-center">
                   <Image

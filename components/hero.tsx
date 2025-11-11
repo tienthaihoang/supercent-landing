@@ -23,12 +23,7 @@ export default function HeroSection() {
   });
   const [eventStatus, setEventStatus] = useState<EventStatus>("upcoming");
 
-  const listImage = [
-    "/kosme-logo.svg",
-    "/likelion-logo.svg",
-    "/jobkorea-logo.svg",
-    "/shinhan-bank-logo.svg",
-  ];
+  const listImage = ["/kosme-logo.svg", "/shinhan-logo.svg"];
 
   useEffect(() => {
     // Event start: November 25, 2025, 9:00 AM
@@ -84,15 +79,15 @@ export default function HeroSection() {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-16 lg:py-20">
         {/* Sponsors Logos */}
-        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-9 mb-6 sm:mb-8 md:mb-10 lg:mb-12">
+        <div className="flex items-center justify-center gap-8 sm:gap-10 md:gap-12 lg:gap-16 mb-6 sm:mb-8 md:mb-10 lg:mb-12">
           {listImage.map((logo, index) => (
             <Image
               key={index}
               src={logo}
               alt={`Sponsor ${index + 1}`}
-              width={100}
-              height={28}
-              className="h-5 sm:h-6 md:h-7 lg:h-[28px] w-auto opacity-90 hover:opacity-100 transition-opacity"
+              width={150}
+              height={45}
+              className="h-6 sm:h-8 md:h-10 lg:h-12 w-auto opacity-90 hover:opacity-100 transition-opacity"
             />
           ))}
         </div>
