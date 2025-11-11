@@ -52,7 +52,11 @@ export default function PartnersSection() {
                     alt={partner.name}
                     width={partner.width}
                     height={partner.height}
-                    className="w-auto h-12 md:h-14 lg:h-16 object-contain opacity-90 hover:opacity-100 transition-opacity duration-300 filter brightness-0 invert"
+                    className={`w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-300 filter brightness-0 invert ${
+                      index < 2
+                        ? "h-12 md:h-14 lg:h-16" // Top row (index 0, 1)
+                        : "h-6 md:h-8 lg:h-10"  // Bottom row (index 2, 3)
+                    }`}
                   />
                 </div>
               ))}
