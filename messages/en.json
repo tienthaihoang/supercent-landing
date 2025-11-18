@@ -183,6 +183,10 @@
       "event2": {
         "title": "Supercent Creative Lab",
         "description": "Audience votes for the most favorite video"
+      },
+      "event3": {
+        "title": "JobKorea Zone: Job Talk Series",
+        "description": "Quick Job Talk sessions from Korean companies: FPT Software Korea, Guideway Consulting, BOS Semiconductor, and more"
       }
     },
     "morning": {

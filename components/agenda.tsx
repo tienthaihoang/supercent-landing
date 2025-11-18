@@ -17,6 +17,11 @@ export default function AgendaSection() {
       titleKey: "allDay.event2.title",
       descKey: "allDay.event2.description",
     },
+    {
+      time: "09:00 - 16:00",
+      titleKey: "allDay.event3.title",
+      descKey: "allDay.event3.description",
+    },
   ];
 
   const morningEvents = [
